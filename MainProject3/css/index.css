@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.class{
+    height: 100vh;
+    width: 100%;
+    /* background-image: linear-gradient(45deg, rgb(150, 93, 1), rgb(255, 241, 203));
+    transform: translateZ(-1000px); */
+    position: relative;
+    transform-style: preserve-3d;
+}
+.class2{
+    width: 150px;
+    height: 350px;
+    /* background-color: red; */
+    position: absolute;
+    top: 60%;left: 50%;
+    transform-style: preserve-3d;
+    transform: perspective(800px) translate(-50%, -50%)rotateY(45deg)rotateX(-75deg);
+    transition: 10s;
+}
+.class2:hover{
+    transform: perspective(800px) translate(-50%, -50%)rotateY(45deg) rotate3d(1,1,1,360deg);
+}
+.class2>div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.591);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.class2>div:nth-of-type(1){
+    background-color: rgba(0, 0, 255, 0.579);
+    /* background-color: pink; */
+    transform: translateZ(75px);
+}
+.class2>div:nth-of-type(2){
+    background-color: rgba(255, 0, 0, 0.507);
+    /* background-color: pink; */
+    transform: translateZ(-75px);
+}
+.class2>div:nth-of-type(3){
+    height: 150px;
+    background-color: rgba(255, 192, 203, 0.424);
+    /* background-color: blue; */
+    transform-origin: top;
+    transform: translateZ(75px)rotateX(-90deg);
+}
+.class2>div:nth-of-type(4){
+    height: 150px;
+    background-color: rgba(64, 224, 208, 0.48);
+    /* background-color: rgba(255, 192, 203, 0.629); */
+    transform-origin: bottom;
+    transform: translateZ(-75px)translateY(200px)rotateX(-90deg);
+}
+.class2>div:nth-of-type(5){
+    background-color: rgba(0, 128, 0, 0.609);
+    /* background-color: rgba(255, 192, 203, 0.56); */
+    transform-origin: right;
+    transform: translateZ(75px)rotateY(-90deg);
+}
+.class2>div:nth-of-type(6){
+    background-color: rgba(255, 166, 0, 0.773);
+    /* background-color: rgba(255, 192, 203, 0.605); */
+    transform-origin: left;
+    transform: translateZ(-75px)rotateY(-90deg);
+}

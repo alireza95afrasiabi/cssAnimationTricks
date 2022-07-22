@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.class{
+    width: 10px;
+    height: 10px;
+    /* background-color: red; */
+    /* border-radius: 50%; */
+    /* position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 50% auto;
+    animation: anime 2s ease-out infinite alternate 1s;
+}
+@keyframes anime{
+    0%{
+        transform: scale(.3);
+        background-color: yellow;
+        border-radius: 50%;
+    }
+    50%{
+        background-color: orange;
+    }
+    100%{
+        background-color: orangered;
+        transform: scale(50);
+    }
+}
